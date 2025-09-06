@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisper</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Pacifico, Roboto, Montserrat -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Pacifico&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Landing Animation -->
+    <div id="landing" class="landing">
+        <h1 class="landing-title">Whisper</h1>
+    </div>
+
+    <!-- Main App -->
+    <div id="app" class="app hidden">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <h1 class="app-title">Whisper</h1>
+                 <p class="site-description">Send your whispers anonymously. Share your thoughts freely
+                    We've got your back!
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="container">
+                <div class="form-card">
+                    <form id="whisperForm" class="form">
+                        <!-- Textarea -->
+                        <div class="textarea-container">
+                            <textarea 
+                                id="textInput"
+                                placeholder="Share your thoughts..."
+                                maxlength="500"
+                                rows="6"
+                                class="textarea"
+                            ></textarea>
+                            <div class="char-counter">
+                                <span id="charCount">0/500 characters</span>
+                                <span id="charWarning" class="char-warning hidden">characters left</span>
+                            </div>
+                        </div>
+
+                        <!-- File Upload -->
+                         <div class="file-upload-wrapper">
+                                 <label for="fileInput">Upload Images</label>
+                                 <span class="coming-soon-badge">Coming Soon</span>
+                            </div>
+                        <div class="upload-container">
+                            <label for="fileInput" class="upload-label">
+                                <div class="upload-area">
+                                    <div class="upload-content">
+                                        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                            <polyline points="7,10 12,15 17,10"/>
+                                            <line x1="12" y1="15" x2="12" y2="3"/>
+                                        </svg>
+                                        <span class="upload-text">Upload images</span>
+                                        <p class="upload-subtext">Up to 2 images (PNG, JPG)</p>
+                                    </div>
+                                </div>
+                            </label>
+                            <input 
+                                id="fileInput"
+                                type="file"
+                                multiple
+                                accept="image/*"
+                                class="file-input"
+                            >
+                            
+
+                            <!-- File Preview -->
+                            <div id="filePreview" class="file-preview hidden"></div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" id="submitBtn" class="submit-btn" disabled>
+                            <svg class="submit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22,2 15,22 11,13 2,9 22,2"/>
+                            </svg>
+                            <span id="submitText">Send Whisper</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p class="footer-text"><a href="https://github.com/voltzdistro" target="_blank">© 2025 Voltzdistro Inc. All rights reserved.</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+
+    
+</body>
+</html>
